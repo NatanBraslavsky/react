@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function AddTask({onAddTaskSubmit}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
@@ -21,9 +22,14 @@ function AddTask({onAddTaskSubmit}){
             />
             <button 
                 onClick={() => {
-                    onAddTaskSubmit(title, description);
-                    setTitle("");
-                    setDescription("");
+                    if(!title.trim() || !description.trim){
+                        alert("Preencha todos os campos.")
+                    }
+                    else{
+                        onAddTaskSubmit(title, description);
+                        setTitle("");
+                        setDescription("");
+                    }
                 }}
                 className="bg-slate-500 text-white px-4 py-2 rounded-md font-medium">
                     Adicionar
