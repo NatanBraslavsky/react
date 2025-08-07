@@ -1,28 +1,35 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
 import {v4} from "uuid";
 
 function App(){
-  const [tasks, setTasks] = useState([{
-    id:1,
-    title: "Estudar Programação",
-    description: "Estudar Programação para obter conhecimento em tecnologia",
-    isCompleted: false
-  },
-  {
-    id:2,
-    title: "Estudar Ingles",
-    description: "Estudar ingles para obter conhecimento em línguas",
-    isCompleted: false
-  },
-  {
-    id:3,
-    title: "Estudar matemática",
-    description: "Estudar matemática para obter conhecimento em cálculo",
-    isCompleted: false
-  }
-])
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks")) || []
+  );
+
+  //executa uma função quando o 'tasks' for alterado
+  useEffect(() =>{
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks]);
+
+  useEffect(() => {
+    async function fetchTasks(){
+      //CHAMAR A API
+      const response = await fetch('https://jsonplaceholder.typicode.com/todos?_limit=10', 
+      {
+        method: 'GET',
+      }
+      );
+      //pegar os dados que ela retorna
+      const data = await response.json();
+      console.log(data);
+      //armazenar/persistir esses dados no state
+      setTasks(data);
+    }
+    fetchTasks();
+  }, [])//lista vazia, a função so é executada quando o usuario acaba de acessar o site
+
   function onTaskClick(taskId) {
     const newTasks = tasks.map(task =>{
       if(task.id == taskId){
@@ -50,7 +57,7 @@ function App(){
   }
 
   return (
-    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
+    <div className="w-full h-full bg-slate-500 flex justify-center p-6">
       <div className="w-[500px] space-y-4">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de Tarefas</h1>
         <AddTask onAddTaskSubmit={onAddTaskSubmit}/>
