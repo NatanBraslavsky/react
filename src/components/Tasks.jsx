@@ -22,10 +22,10 @@ function Tasks({ tasks, onTaskClick, onDeleteTaskClick }) {
                         className={`bg-slate-400 text-left w-full text-white p-2 rounded-md ${task.isCompleted && "line-through"}`} >
                         {task.title}
                     </button>
-                    <Button onClick={() => onSeeDetailsClick(task)} className="bg-slate-400 p-2 rounded-md text-white">
+                    <Button onClick={() => onSeeDetailsClick(task)}>
                         <ChevronRightIcon />
                     </Button>
-                    <Button onClick={() => {onDeleteTaskClick(task.id);}} className="bg-slate-400 p-2 rounded-md text-white">
+                    <Button onClick={() => {onDeleteTaskClick(task.id);}}>
                         <TrashIcon />
                     </Button>
                 </li>
