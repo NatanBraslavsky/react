@@ -28,7 +28,8 @@ function App(){
       //armazenar/persistir esses dados no state
       setTasks(data);
     }
-    fetchTasks();
+    //chamar a função para interagir com a api
+    // fetchTasks();
   }, [])//lista vazia, a função so é executada quando o usuario acaba de acessar o site
 
   function onTaskClick(taskId) {
