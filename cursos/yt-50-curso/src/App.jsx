@@ -1,8 +1,14 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Main from "./components/Main";
+
 export default function App(){
-  return(
-    <section>
-      hello
-    </section>
+  return (
+    <div>
+      <Header />    
+      <Main />
+      <Footer />
+    </div>
   ) 
 }
 
