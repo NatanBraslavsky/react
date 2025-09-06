@@ -18,6 +18,11 @@ const Weather = ({temperature}) => {
     return <h1>It's hot outside!</h1>
 }
 
+const UserStatus = ({loggedIn, isAdmin}) => {
+    {loggedIn && isAdmin && <h1>Welcome Admin</h1>}
+    {loggedIn && !isAdmin && <h1>Welcome Usur</h1>}
+}
+
 export default function App() {
     return (
         <div>
