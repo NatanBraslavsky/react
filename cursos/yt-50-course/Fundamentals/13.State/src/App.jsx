@@ -1,4 +1,5 @@
 import Counter from './Components/Counter'
+import ObjectList from './Components/ObjectList'
 import Todo from './Components/Todo'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <main>
       <Counter/>
       <Todo/>
+      <ObjectList/>
     </main>
   )
 }
