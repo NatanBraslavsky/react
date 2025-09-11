@@ -7,6 +7,8 @@
 // import FunctionUseState from "./Components/FunctionUseState";
 // import FunctionUseStateTwo from "./Components/FunctionUseStateTwo";
 
+import TodoList from "./Components/TodoList";
+
 function App() {
     // const [count, setCount] = useState(0);
     return (
@@ -24,6 +26,7 @@ function App() {
             />
             <FunctionUseState />
             <FunctionUseStateTwo /> */}
+            <TodoList/>
         </main>
     );
 }
