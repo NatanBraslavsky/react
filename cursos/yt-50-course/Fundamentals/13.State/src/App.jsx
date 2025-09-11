@@ -7,6 +7,7 @@
 // import FunctionUseState from "./Components/FunctionUseState";
 // import FunctionUseStateTwo from "./Components/FunctionUseStateTwo";
 
+import Profile from "./Components/Profile";
 import TodoList from "./Components/TodoList";
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
             />
             <FunctionUseState />
             <FunctionUseStateTwo /> */}
-            <TodoList/>
+            {/* <TodoList/> */}
+            <Profile/>
+
         </main>
     );
 }
