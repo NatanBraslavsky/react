@@ -7,12 +7,13 @@
 // import FunctionUseState from "./Components/FunctionUseState";
 // import FunctionUseStateTwo from "./Components/FunctionUseStateTwo";
 
-import Profile from "./Components/Profile";
-import TodoList from "./Components/TodoList";
+import ShoppingList from "./Components/ShoppingList";
+
+// import Profile from "./Components/Profile";
+// import TodoList from "./Components/TodoList";
 
 function App() {
-    // const [count, setCount] = useState(0);
-    return (
+;    return (
         <main>
             {/* <Counter />
             <Todo />
@@ -26,10 +27,10 @@ function App() {
                 onClickHandler={() => setCount(count + 1)}
             />
             <FunctionUseState />
-            <FunctionUseStateTwo /> */}
-            {/* <TodoList/> */}
-            <Profile/>
-
+            <FunctionUseStateTwo />
+            <TodoList/>
+            <Profile/> */}
+            <ShoppingList/>
         </main>
     );
 }
