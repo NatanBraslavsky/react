@@ -1,15 +1,17 @@
-import React from 'react'
+import React from "react";
+import { createPortal } from "react-dom";
 
 const PopUp = ({copied}) => {
-  return (
-    <section>
-        {copied && (
-            <div style={{ position: "absolute", bottom: "3" }}>
-                Copied to cliboard
-            </div>
-        )}
-    </section>
-  )
-}
+    return (
+        <section>
+            {copied && (
+                <div>
+                    <p>Conteúdo copiado.</p>
+                </div>
+            )}
+        </section>,
+        document.querySelector('#popup-content')
+    );
+};
 
-export default PopUp
+export default PopUp;
