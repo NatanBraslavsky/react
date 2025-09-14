@@ -1,4 +1,4 @@
-import Calculator from './Componentes/Calculator'
+// import Calculator from './Componentes/Calculator'
 import CopyInput from './Componentes/CopyInput'
 
 const App = () => {
