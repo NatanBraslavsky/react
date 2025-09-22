@@ -1,12 +1,3 @@
 *{
     transition: all 0.3s;
 }
-body[data-theme="dark"]{
-    background-color: black;
-    color: white;
-}
-
-body[data-theme="light"]{
-    background-color: white;
-    color: black;
-}

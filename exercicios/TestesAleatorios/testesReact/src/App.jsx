@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+// import React, { useEffect, useState } from 'react'
 import MainTheme from './Components/Theme/MainTheme'
 import Togle from './Components/Togle'
+import DarkLight from './Components/DarkLight/DarkLight'
 
 const App = () => {
   // const [user, setUser] = useState([]);
@@ -20,8 +21,8 @@ const App = () => {
         <p>Loading...</p>
       )}       */}
       {/* <MainTheme/> */}
-      <Togle/>
-        
+      {/* <Togle/> */}
+      <DarkLight/>
     </div>
   )
 }
