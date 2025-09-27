@@ -1,6 +1,11 @@
+import UserProfile from "./Components/UserProfile"
+import { UserProvider } from "./UserContext"
+
 const App = () => {
   return (
-    <div>App</div>
+    <UserProvider>
+      <UserProfile/>
+    </UserProvider>
   )
 }
 
