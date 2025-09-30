@@ -1,39 +1,31 @@
-import { useReducer } from 'react'
+import React, {useReducer} from "react";
 
-const reducer = (state, action) =>{
-  switch(action.type){
-    case "Increment":
-      return {...state, count: state.count + 1};
-    case "ShowText":
-      return {...state, showInfo: !state.showInfo}
-    default:
-      return "This Action doens't exist"
-  }
-}
+const reducer = (state, action) => {
+    switch (action.type) {
+        case "Increment":
+            return {count: state.count + 1}
+        case "Decrement":
+            return {count: state.count - 1};
+        case "Reset":
+            return { count: 0 };
+        default:
+            return state;
+    }
+};
 
 const App = () => {
-
     const [state, dispatch] = useReducer(reducer, {
-      count: 0,
-      showInfo: true,
+        count: 0,
     });
-  // const [count, setCount] = useState(0);
-  // const [showInfo, setShowInfo] = useState(false);
-  const handleClick = () =>{
-    dispatch({type: 'Increment'})
-    dispatch({type: 'ShowText'})
-    // setCount(count+1)
-    // setShowInfo(!showInfo)
-  }
+    return (
+        <div>
+            <h1>{state.count}</h1>
+            <button onClick={()=> {dispatch({type: "Increment"})}}>+</button>
+            <button onClick={()=>{dispatch({type: "Decrement"})
+            }}>-</button>
+            <button onClick={()=>{dispatch({type: "Reset"})}}>Reset</button>
+        </div>
+    )
+};
 
-  return (
-    <div>
-      <h1>{state.count}</h1>
-      <button onClick={handleClick}>Increment</button>
-      {state.showInfo && <p>Seja bem vindo! Teste.</p>}
-
-    </div>
-  )
-}
-
-export default App
+export default App;
