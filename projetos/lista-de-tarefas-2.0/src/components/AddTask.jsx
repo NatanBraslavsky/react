@@ -10,9 +10,9 @@ const AddTask = () => {
     }
 
     return (
-        <div>
+        <div className="containerAddTask" onClick={handleChange}>
             {showAddTask ? (
-                <button className="btnAddTask" onClick={handleChange}>
+                <button className="btnAddTask" >
                     <span className="xAddTaskCircle">+</span>
                     <span >Adicionar Tarefa</span>
                 </button>

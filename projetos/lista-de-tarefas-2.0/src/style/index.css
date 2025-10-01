@@ -33,11 +33,14 @@
     gap: 10px;
 }
 
-.btnAddTask:hover{
-    color: #dc4c3e;
+.containerAddTask:hover{
+    cursor: pointer;
     .xAddTaskCircle{
         background-color:#dc4c3e;
         color: white;
+    }
+    .btnAddTask{
+        color: #dc4c3e;
     }
 }
 
