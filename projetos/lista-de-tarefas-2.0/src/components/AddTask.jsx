@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import InputAddTask from "./InputAddTask";
+import '../style/index.css';
 
 const AddTask = () => {
     const [showAddTask, setShowAddTask] = useState(true);
@@ -11,8 +12,9 @@ const AddTask = () => {
     return (
         <div>
             {showAddTask ? (
-                <button onClick={handleChange}>
-                    Adicionar Tarefa
+                <button className="btnAddTask" onClick={handleChange}>
+                    <span className="xAddTaskCircle">+</span>
+                    <span >Adicionar Tarefa</span>
                 </button>
             ) : (
                 <InputAddTask handleChange={handleChange}/>

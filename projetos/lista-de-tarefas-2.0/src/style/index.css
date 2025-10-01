@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.mainContainerTask{
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.taskTitleText{
+    font-size: 24px;
+    color: #202020;
+    line-height: 35px;
+    letter-spacing: 0.035em;
+    padding-bottom: 15px;
+}
+
+.btnAddTask{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    color: gray;
+    font-size: 13.55px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btnAddTask:hover{
+    color: #dc4c3e;
+    .xAddTaskCircle{
+        background-color:#dc4c3e;
+        color: white;
+    }
+}
+
+.xAddTaskCircle{
+    color: #dc4c3e;
+    font-size: 24px;
+    font-weight: 200;
+    display: inline-block;
+    border-radius: 50%;
+    width: 18px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
