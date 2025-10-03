@@ -49,13 +49,32 @@
 }
 
 .inputAdd{
-    height: 28px;
-    padding-left: 7px;
+    height: 25px;
+    padding-left: 8px;
     border: 0;
+    border: none;
+    outline: none;
 }
-.inputAdd:focus{
-    border: 1px solid white;
+
+.inputTitle{
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(50, 50, 50);
 }
+
+.inputTitle::-webkit-input-placeholder{
+    color: rgb(145, 145, 145);
+}
+
+.inputDescription{
+    margin-bottom: 20px;
+}
+
+.inputDescription::-webkit-input-placeholder{
+    color: rgb(164, 164, 164);
+    font-size: 13px;
+}
+
 
 .containerBtnsAddTask{
     display: flex;
