@@ -1,5 +1,4 @@
 .containerAddTask:hover{
-    cursor: pointer;
     .xAddTaskCircle{
         background-color:#dc4c3e;
         color: white;
@@ -7,6 +6,10 @@
     .btnAddTask{
         color: #dc4c3e;
     }
+}
+
+.containerShowAddTask:hover{
+    cursor: pointer;
 }
 
 .btnAddTask{
@@ -45,7 +48,7 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid rgb(215, 215, 215);
-    padding: 5px 0;
+    padding: 8px 0;
 }
 
 .inputAdd{
@@ -72,7 +75,7 @@
 
 .inputDescription::-webkit-input-placeholder{
     color: rgb(164, 164, 164);
-    font-size: 13px;
+    font-size: 13.38px;
 }
 
 

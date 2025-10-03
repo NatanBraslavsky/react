@@ -1,4 +1,3 @@
-import React from 'react'
 import AddTask from './components/AddTask'
 import './style/index.css'
 

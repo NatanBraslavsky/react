@@ -14,7 +14,7 @@ const AddTask = () => {
     return (
         <div className="containerAddTask">
             {showAddTask ? (
-                <div onClick={handleChange}>
+                <div onClick={handleChange} className="containerShowAddTask">
                     <button className="btnAddTask"  >
                         <span className="xAddTaskCircle">+</span>
                         <span >Adicionar Tarefa</span>
