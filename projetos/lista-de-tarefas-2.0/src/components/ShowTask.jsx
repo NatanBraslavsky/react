@@ -1,17 +1,28 @@
-import React from 'react'
+import "../style/index.css";
+import "../style/showTask.css";
+import { IoIosCheckmark } from "react-icons/io";
 
 const ShowTask = () => {
   return (
     <div>
         <ul>
-            <li>
-                
-                <p>fads</p>
-                <p>fsad</p>
+            <li className='listContainerTask'>
+                <div className="checkContainer">
+                  <IoIosCheckmark className="faCheck"/>
+                </div>
+                <div className="containerShowTitleDescription">
+                  <p className="titleShowText">fads</p>
+                  <p className="descriptionShowText">fsad</p>
+                </div>
             </li>
-            <li>
-              <p>aposdfj</p>
-              <p>çalsdkjf</p>
+            <li className='listContainerTask'>
+                <div className="checkContainer">
+                  <IoIosCheckmark className="faCheck"/>
+                </div>
+                <div className="containerShowTitleDescription">
+                  <p className="titleShowText">fads</p>
+                  <p className="descriptionShowText">fsad</p>
+                </div>
             </li>
         </ul>
     </div>
