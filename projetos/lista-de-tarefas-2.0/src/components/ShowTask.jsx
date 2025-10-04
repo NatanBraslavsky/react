@@ -11,7 +11,7 @@ const ShowTask = () => {
                   <IoIosCheckmark className="faCheck"/>
                 </div>
                 <div className="containerShowTitleDescription">
-                  <p className="titleShowText">fads</p>
+                  <p className="titleShowText">asdd</p>
                   <p className="descriptionShowText">fsad</p>
                 </div>
             </li>
