@@ -27,6 +27,15 @@
     cursor: pointer;
 }
 
+.checked{
+    background-color: #dc4c3e;
+    border: 1px solid #dc4c3e;
+   .faCheck{
+        color: white;
+        opacity: 1;
+   } 
+}
+
 .faCheck{
     color: rgb(158, 158, 158);
     font-size: 20px;

@@ -4,7 +4,7 @@ import '../style/index.css';
 import '../style/addTask.css';
 
 
-const AddTask = () => {
+const AddTask = ({addTask}) => {
     const [showAddTask, setShowAddTask] = useState(true);
 
     const handleChange = () =>{
@@ -21,7 +21,7 @@ const AddTask = () => {
                     </button>
                 </div>
             ) : (
-                <InputAddTask handleChange={handleChange}/>
+                <InputAddTask handleChange={handleChange} addTask={addTask}/>
             )}
         </div>
     );
