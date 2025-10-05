@@ -1,3 +1,4 @@
+import { CiMenuKebab } from "react-icons/ci";
 import "../style/index.css";
 import "../style/showTask.css";
 import { IoIosCheckmark } from "react-icons/io";
@@ -14,6 +15,7 @@ const ShowTask = () => {
                   <p className="titleShowText">asdd</p>
                   <p className="descriptionShowText">fsad</p>
                 </div>
+                  <CiMenuKebab className="iconMenuShowTask"/>
             </li>
             <li className='listContainerTask'>
                 <div className="checkContainer">
