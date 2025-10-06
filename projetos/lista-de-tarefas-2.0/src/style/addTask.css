@@ -8,6 +8,10 @@
     }
 }
 
+.containerShowAddTask{
+    margin-bottom: 30px;
+}
+
 .containerShowAddTask:hover{
     cursor: pointer;
 }
@@ -42,6 +46,7 @@
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
 }
 
 .containerInputsAddTask{
