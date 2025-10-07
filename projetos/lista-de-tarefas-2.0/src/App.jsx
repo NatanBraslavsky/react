@@ -2,6 +2,7 @@ import { useState } from 'react';
 import AddTask from './components/AddTask'
 import ShowTask from './components/ShowTask'
 import './style/index.css'
+import PopUpTask from './components/popUpTask';
 
 const App = () => {
   const [task, setTask] = useState([]);
@@ -19,6 +20,7 @@ const App = () => {
       <h3 className='taskTitleText'>Tarefas</h3>
       <ShowTask task={task}/>
       <AddTask addTask={addTask}/>
+      <PopUpTask/>
     </div>
   )
 }

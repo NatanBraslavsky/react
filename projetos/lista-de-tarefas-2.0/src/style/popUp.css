@@ -1,0 +1,30 @@
+.popUpContainer{
+    background-color: #282828;
+    color: white;
+    display: flex;
+    gap: 50px;
+    width: fit-content;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+}
+
+.popUpContainer p {
+    font-size: 13px;
+}
+
+.iconClose{
+    font-weight: 100;
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+    transition: 0.3s all ease;
+}
+
+.iconClose:hover{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
