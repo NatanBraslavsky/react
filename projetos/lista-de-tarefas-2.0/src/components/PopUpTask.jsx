@@ -1,14 +1,26 @@
-import React from 'react'
-import '../style/popUp.css'
-import { TfiClose } from 'react-icons/tfi'
+import {useEffect, useState} from "react";
+import "../style/popUp.css";
+import {TfiClose} from "react-icons/tfi";
 
-const PopUpTask = () => {
-  return (
-    <div className='popUpContainer'>
-        <p>Tarefa adicionada</p>
-        <TfiClose className='iconClose'/>
-    </div>
-  )
-}
+const PopUpTask = ({addTaskShowPop}) => {
+    const [className, setClassName] = useState("");
 
-export default PopUpTask
+    useEffect(() => {
+        if (addTaskShowPop) {
+            setClassName("show");
+        } else {
+            setClassName("");
+        }
+    }, [addTaskShowPop]);
+
+    return (
+        <div className={`popUpContainer ${className}`}>
+            <p>Tarefa adicionada</p>
+            <TfiClose className="iconClose" onClick={()=>{
+                setClassName("");
+            }}/>
+        </div>
+    );
+};
+
+export default PopUpTask;
