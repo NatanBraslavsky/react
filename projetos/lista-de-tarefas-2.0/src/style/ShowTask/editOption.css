@@ -1,22 +1,25 @@
 .containerEditOptions{
     width: 250px;
-    border: 1px solid rgb(236, 236, 236);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .12);
     border-radius: 8px;
     display: flex;
-    gap: 15px;
+    gap: 3px;
     flex-direction: column;
-    padding: 15px 0px 15px 15px;
+    padding: 8px;
 }
 
 .selectAllContainer{
     display: flex;
     gap: 15px;
+    padding: 6px;
+    border-radius: 5px;
     align-items: center;
 }
 
 .selectAllContainer:hover{
-    background-color: rgb(214, 214, 214);
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
 }
 
 .iconAll{
@@ -26,7 +29,7 @@
 
 .txtAll{
     font-size: 13px;
-    color: #202020;
+    color: #303030;
 }
 
 .containerDeleteTask{
