@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.selectAllContainer:hover{
+    background-color: rgb(214, 214, 214);
+}
+
 .iconAll{
     color: #666;
     font-size: 20px;
@@ -25,4 +29,13 @@
     color: #202020;
 }
 
-
+.containerDeleteTask{
+    .trashIcon{
+        color: #dc4c3e
+;
+    }
+    .deleteTxt{
+        color: #dc4c3e
+;
+    }
+}
