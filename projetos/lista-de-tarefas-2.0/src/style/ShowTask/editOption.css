@@ -1,14 +1,3 @@
-.containerEditOptions{
-    width: 250px;
-    border: 1px solid #eee;
-    box-shadow: 0 0 8px rgba(0, 0, 0, .12);
-    border-radius: 8px;
-    display: flex;
-    gap: 3px;
-    flex-direction: column;
-    padding: 8px;
-}
-
 .selectAllContainer{
     display: flex;
     gap: 15px;

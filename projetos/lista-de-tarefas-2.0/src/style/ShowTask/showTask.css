@@ -21,10 +21,10 @@
 }
 
 .checkContainer:hover{
+    cursor: pointer;
     .faCheck{
         opacity: 1;
     }
-    cursor: pointer;
 }
 
 .checked{
@@ -68,7 +68,6 @@
 }
 
 .iconMenuShowTask{
-    float: right;
     transform: rotate(90deg);
     font-size: 24px;
     color: gray;
@@ -80,4 +79,25 @@
     transition: 0.3s all ease;
     background-color: rgb(231, 231, 231);
     color: rgb(29, 29, 29);
+}
+
+.containerEditIcondOption{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.editOption{
+    width: 250px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .12);
+    border-radius: 8px;
+    display: none;
+    gap: 3px;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.openEdit{
+    display: flex;
 }
