@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
-import "../style/index.css";
-import "../style/addTask.css";
+import "../../style/index.css";
+import "../../style/AddTask/addTask.css";
 
 const InputAddTask = ({handleChange, addTask}) => {
   const [title, setTitle] = useState("");

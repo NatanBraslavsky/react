@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import InputAddTask from "./InputAddTask";
-import '../style/index.css';
-import '../style/addTask.css';
+import '../../style/index.css';
+import '../../style/AddTask/addTask.css';
 
 
 const AddTask = ({addTask}) => {

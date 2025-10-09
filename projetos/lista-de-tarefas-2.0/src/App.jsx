@@ -1,8 +1,9 @@
 import { useRef, useState } from 'react';
-import AddTask from './components/AddTask'
-import ShowTask from './components/ShowTask'
-import './style/index.css'
+import AddTask from './components/AddTask/AddTask'
+import ShowTask from './components/ShowTask/ShowTask'
+import './style/index.css';
 import PopUpTask from './components/popUpTask';
+import EditOptions from './components/ShowTask/editOptions';
 
 const App = () => {
   const [task, setTask] = useState([]);
@@ -28,7 +29,7 @@ const App = () => {
 
     timeoutRef.current = setTimeout(() => {
       setAddTaskShowPop(false);
-      timeoutRef.current = null; // limpa referência
+      timeoutRef.current = null;
     }, 2000);
   }
 
@@ -39,6 +40,7 @@ const App = () => {
         <ShowTask task={task}/>
         <AddTask addTask={addTask}/>
         <PopUpTask addTaskShowPop={addTaskShowPop}/>
+        <EditOptions/>
       </div>
     </div>
   )

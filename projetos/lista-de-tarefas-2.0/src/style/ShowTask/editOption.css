@@ -1,0 +1,28 @@
+.containerEditOptions{
+    width: 250px;
+    border: 1px solid rgb(236, 236, 236);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+    border-radius: 8px;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 15px 0px 15px 15px;
+}
+
+.selectAllContainer{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.iconAll{
+    color: #666;
+    font-size: 20px;
+}
+
+.txtAll{
+    font-size: 13px;
+    color: #202020;
+}
+
+

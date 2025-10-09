@@ -1,6 +1,6 @@
 import {CiMenuKebab} from "react-icons/ci";
-import "../style/index.css";
-import "../style/showTask.css";
+import "../../style/index.css";
+import "../../style/ShowTask/showTask.css";
 import {IoIosCheckmark} from "react-icons/io";
 import { useState } from "react";
 
