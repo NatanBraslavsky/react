@@ -7,6 +7,7 @@
     padding-left: 2px;
     max-width: 100%;
     cursor: pointer;
+    position: relative;
 }
 
 .checkContainer{
@@ -96,6 +97,11 @@
     gap: 3px;
     flex-direction: column;
     padding: 8px;
+    position: absolute;
+    bottom: -105px;
+    right: 0;
+    z-index: 2;
+    background-color: white;
 }
 
 .openEdit{
