@@ -1,4 +1,4 @@
-import { use, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import AddTask from './components/AddTask/AddTask'
 import ShowTask from './components/ShowTask/ShowTask'
 import './style/index.css';
@@ -37,9 +37,13 @@ const App = () => {
     }, 2000);
   }
 
-  const deleteTask = () =>{
-    
+  const deleteTask = (taskId) =>{
+    const newTask = task.filter((task)=>{
+      return task.id !== taskId
+    })
+    setTask(newTask)
   }
+
 
   useEffect(()=>{
     setQtdTasks(task.length)
@@ -62,7 +66,7 @@ const App = () => {
           <LuCircleCheck className='iconCheckQtd'/>
           <span className='spanTextQtdTask'>{qtdTasks} {taskText}</span>
         </p>
-        <ShowTask task={task}/>
+        <ShowTask task={task} deleteTask={deleteTask}/>
         <AddTask addTask={addTask}/>
         <PopUpTask addTaskShowPop={addTaskShowPop}/>
       </div>

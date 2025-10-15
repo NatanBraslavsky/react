@@ -5,7 +5,7 @@ import {IoDuplicateOutline} from "react-icons/io5";
 import "../../style/ShowTask/editOption.css";
 import "../../style/ShowTask/showTask.css";
 
-const EditOptions = ({className}) => {
+const EditOptions = ({className, id, deleteTask}) => {
     return (
         <div className={`containerEditOptions ${className}`}>
             <div className="selectAllContainer containerEditTask">
@@ -16,7 +16,7 @@ const EditOptions = ({className}) => {
                 <IoDuplicateOutline className="iconAll duplicateIcon"/>
                 <span className="txtAll duplicateTxt">Duplicar</span>
             </div>
-            <div className="selectAllContainer containerDeleteTask">
+            <div className="selectAllContainer containerDeleteTask" onClick={()=> deleteTask(id)}>
                 <GoTrash className="iconAll trashIcon"/> 
                 <span className="txtAll deleteTxt">Excluir</span>
             </div>

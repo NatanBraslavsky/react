@@ -5,7 +5,7 @@ import {IoIosCheckmark} from "react-icons/io";
 import {useState} from "react";
 import EditOptions from "./EditOptions";
 
-const ShowTask = ({task}) => {
+const ShowTask = ({task, deleteTask}) => {
     const [hoveredId, setHoveredId] = useState(null);
     const [checkedIds, setCheckedIds] = useState([]);
     const [editShow, setEditShow] = useState(null);
@@ -69,6 +69,11 @@ const ShowTask = ({task}) => {
                                 <EditOptions
                                     className={`editOption ${editShow === tk.id ? "openEdit" : ""}`}
                                     editShow={editShow}
+                                    id={tk.id}
+                                    deleteTask={(id)=>{
+                                        deleteTask(id)
+                                        setEditShow(null);
+                                    }}
                                 />
                             )}
                         </li>
