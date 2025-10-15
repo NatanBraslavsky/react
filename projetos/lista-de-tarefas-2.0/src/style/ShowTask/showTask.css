@@ -82,6 +82,12 @@
     color: rgb(29, 29, 29);
 }
 
+.iconMenuShowTask.active {
+  color: #202020;
+  background-color: rgb(240, 240, 240);
+}
+
+
 .containerEditIcondOption{
     display: flex;
     flex-direction: column;
@@ -98,7 +104,7 @@
     flex-direction: column;
     padding: 8px;
     position: absolute;
-    bottom: -105px;
+    top: 40px;
     right: 0;
     z-index: 2;
     background-color: white;
@@ -106,4 +112,15 @@
 
 .openEdit{
     display: flex;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0); /* transparente, mas bloqueia interações */
+    z-index: 1;
+    cursor: default;
 }

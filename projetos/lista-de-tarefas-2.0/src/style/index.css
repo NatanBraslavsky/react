@@ -25,8 +25,26 @@
     color: #202020;
     line-height: 35px;
     letter-spacing: 0.035em;
-    padding-bottom: 25px;
 }
+
+.containerQtdTask{
+    color: #666;
+    display: flex;
+    align-items: start;
+    gap: 4px;
+    padding: 8px 0 25px 5px;
+}
+
+.iconCheckQtd{
+    font-size: 14px;
+}
+
+.spanTextQtdTask{
+    font-size: 13px;
+}
+
+
+
 
 
 

@@ -5,9 +5,9 @@ import {IoDuplicateOutline} from "react-icons/io5";
 import "../../style/ShowTask/editOption.css";
 import "../../style/ShowTask/showTask.css";
 
-const EditOptions = ({className, editShow}) => {
+const EditOptions = ({className}) => {
     return (
-        <div className={`containerEditOptions ${className} ${editShow}`}>
+        <div className={`containerEditOptions ${className}`}>
             <div className="selectAllContainer containerEditTask">
                 <GoPencil className="iconAll pencilIcon"/> 
                 <span className="txtAll editTxt">Editar</span>

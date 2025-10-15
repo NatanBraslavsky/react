@@ -8,7 +8,7 @@ import EditOptions from "./EditOptions";
 const ShowTask = ({task}) => {
     const [hoveredId, setHoveredId] = useState(null);
     const [checkedIds, setCheckedIds] = useState([]);
-    const [editShow, setEditShow] = useState("");
+    const [editShow, setEditShow] = useState(null);
 
     const handleMouseEnter = (id) => {
         setHoveredId(id);
@@ -55,25 +55,33 @@ const ShowTask = ({task}) => {
                                 </p>
                             </div>
 
-                            {hoveredId === tk.id && (
-                                <div className="containerEditIcondOption">
-                                    <CiMenuKebab
-                                        className="iconMenuShowTask"
-                                        onClick={() => {
-                                            setEditShow("openEdit");
-                                        }}
-                                    />
-                                </div>
-                            )}
-                            <div>
+                            {(hoveredId === tk.id || editShow === tk.id) && (
+                                    <div className="containerEditIcondOption">
+                                        <CiMenuKebab
+                                            className={`iconMenuShowTask ${editShow === tk.id ? "active" : ""}`}
+                                            onClick={() => {
+                                                setEditShow(tk.id);
+                                            }}
+                                        />
+                                    </div>
+                                )}
+                            {editShow === tk.id && (
                                 <EditOptions
-                                    className="editOption"
+                                    className={`editOption ${editShow === tk.id ? "openEdit" : ""}`}
                                     editShow={editShow}
                                 />
-                            </div>
+                            )}
                         </li>
                     );
                 })}
+                {editShow && (
+                    <div
+                        className="overlay"
+                        onClick={() => {
+                            setEditShow(null);
+                        }}
+                    ></div>
+                )}
             </ul>
         </div>
     );
