@@ -4,12 +4,13 @@ import "../../style/ShowTask/showTask.css";
 import {IoIosCheckmark} from "react-icons/io";
 import {useState} from "react";
 import EditOptions from "./EditOptions";
+import ModalTask from "../EditTask/ModalTask";
 
 const ShowTask = ({task, deleteTask}) => {
     const [hoveredId, setHoveredId] = useState(null);
     const [checkedIds, setCheckedIds] = useState([]);
     const [editShow, setEditShow] = useState(null);
-
+    const [selectedTask, setSelectedTask] = useState(null);
     const handleMouseEnter = (id) => {
         setHoveredId(id);
     };
@@ -38,6 +39,7 @@ const ShowTask = ({task, deleteTask}) => {
                             key={tk.id}
                             onMouseEnter={() => handleMouseEnter(tk.id)}
                             onMouseLeave={handleMouseLeave}
+                            onClick={() => setSelectedTask(tk)}
                         >
                             <div
                                 className={`checkContainer ${
@@ -75,6 +77,9 @@ const ShowTask = ({task, deleteTask}) => {
                                         setEditShow(null);
                                     }}
                                 />
+                            )}
+                            {selectedTask && (
+                                <ModalTask task={selectedTask}/>
                             )}
                         </li>
                     );

@@ -44,6 +44,9 @@ const App = () => {
     setTask(newTask)
   }
 
+  const editTask = (taskId, newData) =>{
+    setTask(prev => prev.map(tk => tk.id === taskId ? {...tk, ...newData} : tk))
+  }
 
   useEffect(()=>{
     setQtdTasks(task.length)
@@ -66,7 +69,7 @@ const App = () => {
           <LuCircleCheck className='iconCheckQtd'/>
           <span className='spanTextQtdTask'>{qtdTasks} {taskText}</span>
         </p>
-        <ShowTask task={task} deleteTask={deleteTask}/>
+        <ShowTask task={task} deleteTask={deleteTask} editTask={editTask}/>
         <AddTask addTask={addTask}/>
         <PopUpTask addTaskShowPop={addTaskShowPop}/>
       </div>
