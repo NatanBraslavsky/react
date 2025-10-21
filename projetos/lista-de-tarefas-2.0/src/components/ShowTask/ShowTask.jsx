@@ -79,7 +79,8 @@ const ShowTask = ({task, deleteTask}) => {
                                 />
                             )}
                             {selectedTask && (
-                                <ModalTask task={selectedTask}/>
+                                // <ModalTask task={selectedTask}/>
+                                console.log("modalTask")
                             )}
                         </li>
                     );

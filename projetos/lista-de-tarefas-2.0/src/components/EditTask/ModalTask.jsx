@@ -8,4 +8,4 @@ const ModalTask = ({task}) => {
   )
 }
 
-export default ModalTask
+export default ModalTask 
