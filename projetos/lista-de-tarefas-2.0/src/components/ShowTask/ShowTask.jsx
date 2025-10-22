@@ -27,6 +27,17 @@ const ShowTask = ({task, deleteTask}) => {
         );
     };
 
+    const handleEditClick = (e, tk) => {
+        e.stopPropagation();
+        setEditShow(tk.id);
+    }
+
+    const handleTaskClick = (tk) => {
+        if(editShow !== tk.id){
+            setSelectedTask(tk)
+        }
+    }
+
     return (
         <div>
             <ul>
@@ -39,7 +50,7 @@ const ShowTask = ({task, deleteTask}) => {
                             key={tk.id}
                             onMouseEnter={() => handleMouseEnter(tk.id)}
                             onMouseLeave={handleMouseLeave}
-                            onClick={() => setSelectedTask(tk)}
+                            onClick={() => handleTaskClick(tk)}
                         >
                             <div
                                 className={`checkContainer ${
@@ -61,9 +72,7 @@ const ShowTask = ({task, deleteTask}) => {
                                     <div className="containerEditIcondOption">
                                         <CiMenuKebab
                                             className={`iconMenuShowTask ${editShow === tk.id ? "active" : ""}`}
-                                            onClick={() => {
-                                                setEditShow(tk.id);
-                                            }}
+                                            onClick={(e) => handleEditClick(e, tk)}
                                         />
                                     </div>
                                 )}
@@ -78,10 +87,6 @@ const ShowTask = ({task, deleteTask}) => {
                                     }}
                                 />
                             )}
-                            {selectedTask && (
-                                // <ModalTask task={selectedTask}/>
-                                console.log("modalTask")
-                            )}
                         </li>
                     );
                 })}
@@ -94,6 +99,9 @@ const ShowTask = ({task, deleteTask}) => {
                     ></div>
                 )}
             </ul>
+            {selectedTask && (
+                <ModalTask task={selectedTask} setSelectedTask={setSelectedTask}/>
+            )}
         </div>
     );
 };
