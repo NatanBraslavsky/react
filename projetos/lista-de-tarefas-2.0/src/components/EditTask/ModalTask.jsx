@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import '../../style/EditTask/editTask.css'
+import { GoInbox } from 'react-icons/go';
 
 const ModalTask = ({task, setSelectedTask}) => {
 
@@ -14,7 +15,12 @@ const ModalTask = ({task, setSelectedTask}) => {
 
   return (
     <div className="modalShowTaskContainer" onClick={handleClose}>
+      
       <div className='cardShowTask'>
+        <div className='topLine'>
+          <GoInbox className='iconFaInbox'/>
+          <p className='txtEditFain'>Editar</p>
+        </div>
         <input type="text" value={title}/>
         <input type="text" value={description}/>
       </div>
