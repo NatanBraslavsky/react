@@ -19,7 +19,8 @@ const ShowTask = ({task, deleteTask}) => {
         setHoveredId(null);
     };
 
-    const handleChangeCheck = (id) => {
+    const handleChangeCheck = (e, id) => {
+        e.stopPropagation()
         setCheckedIds((prev) =>
             prev.includes(id)
                 ? prev.filter((item) => item !== id)
@@ -33,9 +34,7 @@ const ShowTask = ({task, deleteTask}) => {
     }
 
     const handleTaskClick = (tk) => {
-        if(editShow !== tk.id){
-            setSelectedTask(tk)
-        }
+        setSelectedTask(tk)
     }
 
     return (
@@ -56,7 +55,7 @@ const ShowTask = ({task, deleteTask}) => {
                                 className={`checkContainer ${
                                     isChecked ? "checked" : ""
                                 }`}
-                                onClick={() => handleChangeCheck(tk.id)}
+                                onClick={(e) => handleChangeCheck(e, tk.id)}
                             >
                                 <IoIosCheckmark className="faCheck" />
                             </div>
