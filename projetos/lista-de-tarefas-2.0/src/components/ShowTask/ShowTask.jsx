@@ -75,7 +75,7 @@ const ShowTask = ({task, deleteTask}) => {
                                             onClick={(e) => handleEditClick(e, tk)}
                                         />
                                     </div>
-                                )}
+                            )}
                             {editShow === tk.id && (
                                 <EditOptions
                                     className={`editOption ${editShow === tk.id ? "openEdit" : ""}`}
