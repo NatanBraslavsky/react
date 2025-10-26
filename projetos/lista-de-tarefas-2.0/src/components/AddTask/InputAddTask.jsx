@@ -23,8 +23,8 @@ const InputAddTask = ({handleChange, addTask}) => {
     <div className='containerInputsBtnAddTask'>
       <form onSubmit={handleSubmit}>
         <div className='containerInputsAddTask'>
-          <input type="text" className='inputAdd inputTitle' placeholder='Título da tarefa' value={title} onChange={(e)=>setTitle(e.target.value)} ref={inputRef}/>
-          <input type="text" className='inputAdd inputDescription' placeholder='Descrição' value={description} onChange={(e)=>setDescription(e.target.value)}/>
+          <input type="text" className='inputAdd inputTitle' placeholder='Título da tarefa' value={title} onChange={(e)=>setTitle(e.target.value)} ref={inputRef} maxLength={50}/>
+          <input type="text" className='inputAdd inputDescription' placeholder='Descrição' value={description} onChange={(e)=>setDescription(e.target.value)} maxLength={100}/>
         </div>
         <div className='containerBtnsAddTask'>
           <button onClick={handleChange} className='button btnCancel' type='button'>Cancelar</button>
