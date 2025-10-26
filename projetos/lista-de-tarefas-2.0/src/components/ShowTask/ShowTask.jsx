@@ -66,7 +66,7 @@ const ShowTask = ({task, deleteTask}) => {
                                     {tk.description}
                                 </p>
                             </div>
-
+                            
                             {(hoveredId === tk.id || editShow === tk.id) && (
                                     <div className="containerEditIcondOption">
                                         <CiMenuKebab

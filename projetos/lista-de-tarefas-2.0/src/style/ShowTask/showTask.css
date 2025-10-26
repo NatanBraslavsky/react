@@ -8,7 +8,8 @@
     max-width: 100%;
     cursor: pointer;
     position: relative;
-    height: 58px;
+    min-height: 58px;
+    height: fit-content;
 }
 
 .checkContainer{
@@ -51,7 +52,6 @@
     flex-direction: column;
     gap: 5px;
     flex: 1;
-    min-width: 0;
 }
 
 .titleShowText{
@@ -67,6 +67,10 @@
 .descriptionShowText{
     font-size: 12px;
     color: rgb(95, 95, 95);
+    width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    min-width: 0;
 }
 
 .iconMenuShowTask{
