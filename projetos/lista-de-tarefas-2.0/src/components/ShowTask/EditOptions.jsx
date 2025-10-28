@@ -16,7 +16,7 @@ const EditOptions = ({className, id, deleteTask}) => {
                 <IoDuplicateOutline className="iconAll duplicateIcon"/>
                 <span className="txtAll duplicateTxt">Duplicar</span>
             </div>
-            <div className="selectAllContainer containerDeleteTask" onClick={()=> deleteTask(id)}>
+            <div className="selectAllContainer containerDeleteTask" onClick={(e)=> deleteTask(e, id)}>
                 <GoTrash className="iconAll trashIcon"/> 
                 <span className="txtAll deleteTxt">Excluir</span>
             </div>

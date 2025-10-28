@@ -37,7 +37,8 @@ const App = () => {
     }, 2000);
   }
 
-  const deleteTask = (taskId) =>{
+  const deleteTask = (e, taskId) =>{
+    e.stopPropagation();
     const newTask = task.filter((task)=>{
       return task.id !== taskId
     })

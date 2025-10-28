@@ -80,8 +80,8 @@ const ShowTask = ({task, deleteTask}) => {
                                     className={`editOption ${editShow === tk.id ? "openEdit" : ""}`}
                                     editShow={editShow}
                                     id={tk.id}
-                                    deleteTask={(id)=>{
-                                        deleteTask(id)
+                                    deleteTask={(e, id)=>{
+                                        deleteTask(e, id)
                                         setEditShow(null);
                                     }}
                                 />
