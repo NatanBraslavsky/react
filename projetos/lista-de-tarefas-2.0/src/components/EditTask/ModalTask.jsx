@@ -21,8 +21,16 @@ const ModalTask = ({task, setSelectedTask}) => {
           <GoInbox className='iconFaInbox'/>
           <p className='txtEditFain'>Editar</p>
         </div>
-        <input type="text" value={title}/>
-        <input type="text" value={description}/>
+        <div className="containerInputsBtnsEditTask">
+          <div className='containerTitleDescEditTask'>
+            <input type="text" value={title} className='titleEditTaskInput' placeholder='Nome da tarefa'/>
+            <input type="text" value={description} className='descriptionEditTaskInput' placeholder='Descrição'/>
+          </div>
+          <div className='containerBtns'>
+            <button>Cancelar</button>
+            <button>Salvar</button>
+          </div>
+        </div>
       </div>
     </div>
   )
