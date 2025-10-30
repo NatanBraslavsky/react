@@ -27,7 +27,7 @@ const ModalTask = ({task, setSelectedTask}) => {
             <textarea type="text" value={description} className='descriptionEditTaskInput' placeholder='Descrição'/>
           </div>
           <div className='containerBtns'>
-            <button className='btnEditTask btnCancel'>Cancelar</button>
+            <button className='btnEditTask btnCancel' onClick={handleClose}>Cancelar</button>
             <button className='btnEditTask btnSave'>Salvar</button>
           </div>
         </div>
