@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../../style/EditTask/editTask.css'
 import { GoInbox } from 'react-icons/go';
+import { GrFormClose } from 'react-icons/gr';
 
 const ModalTask = ({task, setSelectedTask}) => {
 
@@ -18,8 +19,13 @@ const ModalTask = ({task, setSelectedTask}) => {
       
       <div className='cardShowTask'>
         <div className='topLine'>
-          <GoInbox className='iconFaInbox'/>
-          <p className='txtEditFain'>Editar</p>
+          <div className='containerIconeEdit'>
+            <GoInbox className='iconFaInbox'/>
+            <p className='txtEditFain'>Editar</p>
+          </div>
+          <div onClick={() => setSelectedTask(null)}>
+            <GrFormClose className='iconCloseEditTask' />
+          </div>
         </div>
         <div className="containerInputsBtnsEditTask">
           <div className='containerTitleDescEditTask'>
