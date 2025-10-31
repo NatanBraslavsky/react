@@ -25,8 +25,28 @@
     margin-bottom: 10px;
     display: flex;
     gap: 3px;
-    padding: 15px 0 20px 15px;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.iconCloseEditTask{
+    font-size: 25px;
+    color: rgb(119, 119, 119);
+    transition: 0.3s all;
+}
+
+.containerIconeEdit{
+    display: flex;
+    gap: 3px;
+}
+
+.iconCloseEditTask:hover{
+    transition: 0.3s all;
+    color: rgb(53, 53, 53);
+    cursor: pointer;
+}
+
 
 .iconFaInbox{
     color: rgb(95, 95, 95);
@@ -38,6 +58,7 @@
     font-size: 12px;
     color: rgb(119, 119, 119);
     font-weight: 500;
+    padding-top: 1px;
 }
 
 .containerInputsBtnsEditTask{
@@ -70,6 +91,7 @@
 .descriptionEditTaskInput{
     height: 60px;
     resize: none;
+    color: rgb(59, 59, 59);
 }
 
 .containerBtns{

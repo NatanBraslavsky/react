@@ -6,7 +6,7 @@ import {useState} from "react";
 import EditOptions from "./EditOptions";
 import ModalTask from "../EditTask/ModalTask";
 
-const ShowTask = ({task, deleteTask}) => {
+const ShowTask = ({task, deleteTask, editTask}) => {
     const [hoveredId, setHoveredId] = useState(null);
     const [checkedIds, setCheckedIds] = useState([]);
     const [editShow, setEditShow] = useState(null);
@@ -97,7 +97,7 @@ const ShowTask = ({task, deleteTask}) => {
                 )}
             </ul>
             {selectedTask && (
-                <ModalTask task={selectedTask} setSelectedTask={setSelectedTask}/>
+                <ModalTask task={selectedTask} setSelectedTask={setSelectedTask} editTask={editTask}/>
             )}
         </div>
     );
