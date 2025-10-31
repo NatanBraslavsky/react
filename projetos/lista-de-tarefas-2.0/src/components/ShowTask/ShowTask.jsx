@@ -52,9 +52,7 @@ const ShowTask = ({task, deleteTask}) => {
                             onClick={() => handleTaskClick(tk)}
                         >
                             <div
-                                className={`checkContainer ${
-                                    isChecked ? "checked" : ""
-                                }`}
+                                className={`checkContainer ${isChecked ? "checked" : ""}`}
                                 onClick={(e) => handleChangeCheck(e, tk.id)}
                             >
                                 <IoIosCheckmark className="faCheck" />
