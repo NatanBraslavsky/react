@@ -2,13 +2,16 @@ import {CiMenuKebab} from "react-icons/ci";
 import "../../style/index.css";
 import "../../style/ShowTask/showTask.css";
 import {IoIosCheckmark} from "react-icons/io";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import EditOptions from "./EditOptions";
 import ModalTask from "../EditTask/ModalTask";
 
 const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
     const [hoveredId, setHoveredId] = useState(null);
-    const [checkedIds, setCheckedIds] = useState([]);
+    const [checkedIds, setCheckedIds] = useState(() => {
+        const savedChecks = localStorage.getItem("checkedTasks");
+        return savedChecks ? JSON.parse(savedChecks) : [];
+    });
     const [editShow, setEditShow] = useState(null);
     const [selectedTask, setSelectedTask] = useState(null);
     const handleMouseEnter = (id) => {
@@ -20,7 +23,7 @@ const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
     };
 
     const handleChangeCheck = (e, id) => {
-        e.stopPropagation()
+        e.stopPropagation();
         setCheckedIds((prev) =>
             prev.includes(id)
                 ? prev.filter((item) => item !== id)
@@ -31,11 +34,16 @@ const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
     const handleEditClick = (e, tk) => {
         e.stopPropagation();
         setEditShow(tk.id);
-    }
+    };
 
     const handleTaskClick = (tk) => {
-        setSelectedTask(tk)
-    }
+        setSelectedTask(tk);
+    };
+
+    // Adicione este useEffect para salvar os checks
+    useEffect(() => {
+        localStorage.setItem("checkedTasks", JSON.stringify(checkedIds));
+    }, [checkedIds]);
 
     return (
         <div>
@@ -52,7 +60,9 @@ const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
                             onClick={() => handleTaskClick(tk)}
                         >
                             <div
-                                className={`checkContainer ${isChecked ? "checked" : ""}`}
+                                className={`checkContainer ${
+                                    isChecked ? "checked" : ""
+                                }`}
                                 onClick={(e) => handleChangeCheck(e, tk.id)}
                             >
                                 <IoIosCheckmark className="faCheck" />
@@ -64,22 +74,26 @@ const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
                                     {tk.description}
                                 </p>
                             </div>
-                            
+
                             {(hoveredId === tk.id || editShow === tk.id) && (
-                                    <div className="containerEditIcondOption">
-                                        <CiMenuKebab
-                                            className={`iconMenuShowTask ${editShow === tk.id ? "active" : ""}`}
-                                            onClick={(e) => handleEditClick(e, tk)}
-                                        />
-                                    </div>
+                                <div className="containerEditIcondOption">
+                                    <CiMenuKebab
+                                        className={`iconMenuShowTask ${
+                                            editShow === tk.id ? "active" : ""
+                                        }`}
+                                        onClick={(e) => handleEditClick(e, tk)}
+                                    />
+                                </div>
                             )}
                             {editShow === tk.id && (
                                 <EditOptions
-                                    className={`editOption ${editShow === tk.id ? "openEdit" : ""}`}
+                                    className={`editOption ${
+                                        editShow === tk.id ? "openEdit" : ""
+                                    }`}
                                     editShow={editShow}
                                     id={tk.id}
-                                    deleteTask={(e, id)=>{
-                                        deleteTask(e, id)
+                                    deleteTask={(e, id) => {
+                                        deleteTask(e, id);
                                         setEditShow(null);
                                     }}
                                     duplicateTask={(e, id) => {
@@ -102,7 +116,11 @@ const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
                 )}
             </ul>
             {selectedTask && (
-                <ModalTask task={selectedTask} setSelectedTask={setSelectedTask} editTask={editTask}/>
+                <ModalTask
+                    task={selectedTask}
+                    setSelectedTask={setSelectedTask}
+                    editTask={editTask}
+                />
             )}
         </div>
     );
