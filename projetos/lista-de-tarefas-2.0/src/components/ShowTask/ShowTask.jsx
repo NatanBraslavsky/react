@@ -6,7 +6,7 @@ import {useState} from "react";
 import EditOptions from "./EditOptions";
 import ModalTask from "../EditTask/ModalTask";
 
-const ShowTask = ({task, deleteTask, editTask}) => {
+const ShowTask = ({task, deleteTask, editTask, duplicateTask}) => {
     const [hoveredId, setHoveredId] = useState(null);
     const [checkedIds, setCheckedIds] = useState([]);
     const [editShow, setEditShow] = useState(null);
@@ -82,6 +82,11 @@ const ShowTask = ({task, deleteTask, editTask}) => {
                                         deleteTask(e, id)
                                         setEditShow(null);
                                     }}
+                                    duplicateTask={(e, id) => {
+                                        duplicateTask(e, id);
+                                        setEditShow(null);
+                                    }}
+                                    setEditShow={setEditShow}
                                 />
                             )}
                         </li>

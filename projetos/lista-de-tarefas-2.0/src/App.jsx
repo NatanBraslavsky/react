@@ -62,6 +62,20 @@ const App = () => {
     }
   },[qtdTasks])
 
+  const duplicateTask = (e, taskId) => {
+    e.stopPropagation();
+    const taskToDuplicate = task.find(t => t.id === taskId);
+    if(taskToDuplicate) {
+      const duplicatedTask ={
+        ...taskToDuplicate,
+        id:Math.random()
+      }
+      setTask([...task, duplicatedTask]);
+    }
+  }
+
+
+
   return (
     <div className='containerMaxW'>
       <div className='mainContainerTask'>
@@ -70,7 +84,7 @@ const App = () => {
           <LuCircleCheck className='iconCheckQtd'/>
           <span className='spanTextQtdTask'>{qtdTasks} {taskText}</span>
         </p>
-        <ShowTask task={task} deleteTask={deleteTask} editTask={editTask}/>
+        <ShowTask task={task} deleteTask={deleteTask} editTask={editTask} duplicateTask={duplicateTask}/>
         <AddTask addTask={addTask}/>
         <PopUpTask addTaskShowPop={addTaskShowPop}/>
       </div>
