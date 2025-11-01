@@ -114,7 +114,7 @@
 }
 
 .btnSave{
-    background-color: #dc4c3e;
+    background-color: #0D8BD9;
     color: white;
 }
 
@@ -124,6 +124,6 @@
 }
 
 .btnSave:hover{
-    background-color: #c44438;
+    background-color: #0b6fae;
     cursor: pointer;
 }

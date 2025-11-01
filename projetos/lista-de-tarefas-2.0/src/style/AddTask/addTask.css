@@ -1,10 +1,10 @@
 .containerAddTask:hover{
     .xAddTaskCircle{
-        background-color:#dc4c3e;
+        background-color:#0D8BD9;
         color: white;
     }
     .btnAddTask{
-        color: #dc4c3e;
+        color: #0D8BD9;
     }
 }
 
@@ -29,7 +29,7 @@
 }
 
 .xAddTaskCircle{
-    color: #dc4c3e;
+    color: #0D8BD9;
     font-size: 24px;
     font-weight: 200;
     display: inline-block;
@@ -104,12 +104,12 @@
 }
 
 .AddTaskBtn{
-    background-color: #dc4c3e;
+    background-color: #0D8BD9;
     color: white;   
 }
 
 .AddTaskBtn:hover{
-    background-color: #c44438;
+    background-color: #0b6fae;
     cursor: pointer;
 }
 
