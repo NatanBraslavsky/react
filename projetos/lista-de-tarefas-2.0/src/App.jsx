@@ -7,7 +7,6 @@ import {LuCircleCheck} from "react-icons/lu";
 
 const App = () => {
     const [task, setTask] = useState(() => {
-        // Carregar tasks do localStorage na inicialização
         const savedTasks = localStorage.getItem("tasks");
         return savedTasks ? JSON.parse(savedTasks) : [];
     });
@@ -16,7 +15,6 @@ const App = () => {
     const [taskText, setTaskText] = useState("Tarefa");
     const timeoutRef = useRef(null);
 
-    // Adicionar novo useEffect para salvar no localStorage
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(task));
     }, [task]);
